@@ -15,7 +15,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             }
 
             pool.execute(move || {
-                // This PI digit implementation algorithm is based on pseudocode from:
+                // This pi digit spigot algorithm is based on pseudocode from:
                 // https://homepages.cwi.nl/~steven/abc/programmers/examples.html
                 // (Section: Numbers, Subsection: Pi)
 
