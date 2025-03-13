@@ -1,0 +1,10 @@
+[package]
+name = "pigen-tcp"
+version = "0.1.0"
+edition = "2024"
+license = "GPL-3"
+authors = ["Maciej Pędzich <maciej.pedzich@pja.edu.pl>"]
+
+[dependencies]
+rug = "1.27.0"
+threadpool = "1.8.1"
