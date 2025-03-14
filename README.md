@@ -19,6 +19,10 @@ cargo run
 cargo build --release
 ```
 
+## Acknowledgements
+
+Special thanks go to the authors of the [`threadpool`](https://crates.io/crates/threadpool) and [`rug`](https://crates.io/crates/rug) crates that power this app, as well as [_The ABC Programmer's Handbook_](https://homepages.cwi.nl/~steven/abc/programmers/examples.html) for providing the &pi; digit spigot algorithm.
+
 ## License
 
 GNU General Public License v3
