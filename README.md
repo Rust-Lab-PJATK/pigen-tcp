@@ -7,16 +7,24 @@ This demo project is a Rust implementation of a slightly modified TCP-based Pige
 - use of TCP port 31415 instead of invalid 314159
 - explicit transmission of the first digit of pi before the decimal point
 
-## Run in dev mode
+## Running in dev mode
 
 ```
 cargo run
 ```
 
-## Build
+## Building
 
 ``` 
 cargo build --release
+```
+
+## Connecting to the server
+
+You can write a custom TCP client or use a general-purpose one such as [`ncat`](https://nmap.org/ncat):
+
+```
+ncat --recv-only <SERVER_IP> 31415
 ```
 
 ## Acknowledgements
