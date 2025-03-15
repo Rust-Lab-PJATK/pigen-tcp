@@ -18,6 +18,7 @@ fn main() -> Result<(), Box<dyn Error>> {
             // https://homepages.cwi.nl/~steven/abc/programmers/examples.html
             // (Section: Numbers, Subsection: Pi)
 
+            let mut batch = String::with_capacity(100);
             let mut k = Integer::from(2);
             let mut a = Integer::from(4);
             let mut b = Integer::from(1);
@@ -42,10 +43,14 @@ fn main() -> Result<(), Box<dyn Error>> {
                 let mut d1 = Integer::from(&a1 / &b1);
 
                 while d == d1 {
-                    let ascii_d = d.to_string();
+                    batch.push_str(&d.to_string());
                     
-                    if let Err(_e) = stream.write_all(ascii_d.as_ref()) {
-                        break 'pi;
+                    if batch.len() == batch.capacity() {
+                        if let Err(_e) = stream.write_all(batch.as_ref()) {
+                            break 'pi;
+                        }
+                        
+                        batch.clear();
                     }
 
                     a %= &b;
